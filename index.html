@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anjha</title>
+    <style>
+        /* Global Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        img { max-width: 100%; }
+        span, a { display: inline-block; }
+        ul { margin: 0; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background-image: radial-gradient(circle, #00cbfc, #22a3d7, #2d7db0, #2e5987, #26385e); 
+            color: #333; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+        }
+
+        /* Outer Box */
+        .outer-box {
+            background-color: #f0e6d365; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            max-width: 1300px; 
+            width: 90%; 
+            transform-style: preserve-3d; 
+            transition-duration: 1s; 
+            border: 2px solid rgba(244, 84, 52, 0.72); 
+        }
+
+        /* Inner Box */
+        .inner-box {
+            background-color: #ffffff; 
+            padding: 20px; 
+            border-radius: 10px; 
+        }
+
+        /* Inner Container */
+        .container {
+            display: flex; 
+            gap: 40px; 
+        }
+
+        /* Left Column (Image, Contact Info, and About Me) */
+        .left-column {
+            width: 40%; 
+            background-color: rgba(220, 220, 220, 1); 
+            padding: 20px; 
+            border-radius: 10px; 
+            color: #00000098; 
+        }
+
+        /* Right Column (Experience and Education) */
+        .right-column {
+            width: 60%; 
+        }
+
+        /* Box Styles */
+        .box {
+            background-color: #ffffff; 
+            padding: 20px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 20px; 
+            transform-style: preserve-3d; 
+            transition-duration: 3s; 
+        }
+
+        /* Image Styles */
+        .profile-image {
+            width: 100%; 
+            max-width: 200px; 
+            height: auto; 
+            border-radius: 10px; 
+            margin-bottom: 20px; 
+        }
+
+        /* Headings */
+        h1 {
+            font-size: 24px; 
+            margin-bottom: 20px; 
+            color: #2c3e50; 
+        }
+
+        h2 {
+            font-size: 20px; 
+            margin-top: 20px; 
+            margin-bottom: 10px; 
+            color: #040f17; 
+        }
+
+        h3 {
+            font-size: 18px; 
+            margin-top: 15px; 
+            margin-bottom: 10px; 
+            color: #000000; 
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 30px; 
+        }
+
+        .section ul {
+            list-style-type: none; 
+            padding: 0; 
+        }
+
+        .section ul li {
+            margin-bottom: 10px; 
+            color: #555; 
+        }
+
+        /* Contact Info Styles */
+        .contact-info {
+            margin-bottom: 20px; 
+        }
+
+        .contact-info p {
+            margin: 5px 0; 
+            color: #0a0a0a; 
+        }
+
+        /* About Me Styles */
+        .about-me {
+            margin-bottom: 20px; 
+        }
+
+        .about-me p {
+            color: #0c0909; 
+        }
+
+        /* Education Styles */
+        .education {
+            margin-bottom: 20px; 
+        }
+
+        .date-range {
+            font-weight: bold; 
+            margin-bottom: 10px; 
+            color: #000000d3; 
+        }
+
+        /* Horizontal Line */
+        hr {
+            border: 0; 
+            height: 1px; 
+            background: #ddd; 
+            margin: 20px 0; 
+        }
+
+        /* Switch Styles */
+        .switch {
+            position: fixed; 
+            top: 10px; 
+            left: 10px; 
+        }
+
+        .switch label {
+            color: whitesmoke; 
+        }
+
+        /* Link Styles */
+        a {
+            color: rgb(255 245 243 / 66%); 
+            text-decoration: none; 
+            transition-duration: 0.5s !important; 
+        }
+
+        a:hover {
+            color: rgba(52, 142, 244, 0.9); 
+        }
+
+        /* Hover Effects */
+        .outer-box.hover-active:hover {
+            transform: rotateY(70deg) rotateX(32deg) scale(0.8); 
+        }
+
+        .outer-box:hover .box {
+            transform: translateZ(50px); 
+        }
+    </style>
+</head>
+<br>
+    <!-- Switch for Hover and JavaScript Effects -->
+    <div class="switch">
+        <div class="form-check form-switch hover">
+            <input class="form-check-input" type="checkbox" role="switch" id="hover">
+            <label class="form-check-label" for="hover">Enable Hover</label>
+        </div>
+        <div class="form-check form-switch js">
+            <input class="form-check-input" type="checkbox" role="switch" id="js">
+            <label class="form-check-label" for="js">Enable JavaScript</label>
+        </div>
+    </div>
+
+    <!-- Outer Box -->
+    <div class="outer-box">
+        <!-- Inner Box -->
+        <div class="inner-box">
+            <!-- Inner Container -->
+            <div class="container">
+                <!-- Left Column: Image, Contact Info, and About Me -->
+                <div class="left-column">
+                    <!-- Profile Image -->
+                    <div class="box">
+                        <img src="a.jpg" alt="Achhuta Nand Jha" class="profile-image">
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="box">
+                        <h1><h2 style="color: #3498db;">Achhuta Nand Jha</h2></h1>
+                        <p>anjha1</p>
+                        <h3>Data Scientist</h3>
+                        <p><a href="tel:+917281031975" style="text-decoration: none; color: inherit;">+91 7281031975</a></p>
+
+                        <p>India-Mathura</p>
+                        <p><a href="https://anjha1.github.io/portfolio-Home/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">portfolio-Home</a></p>
+
+                        <p><a href="mailto:achhuta.jha_s.da23@gla.ac.in" style="text-decoration: none; color: inherit;">achhuta.jha_s.da23@gla.ac.in</a></p>
+                     
+                    </div>
+
+
+                    <!-- About Me Section -->
+                    <div class="box">
+                        <h1><h2 style="color: #3498db;">About me</h2></h1>
+                        <p>I am a Data Scientist who has general knowledge and experience on different IT areas such as AI, Machine Learning, Deep Learning, Big Data, Google Cloud Platform (GCP), Data Engineering, Front End Development, Back-End Development. I have more than 1 year of Internship experience in Data Science.</p>
+                        <p>My passion is to bring innovation and value through cross-functional collaboration. I follow Design Principles to build real-world Data Science projects with end-to-end pipelines. I am also working on integrating MLOps practices into my work. Beyond these aspects, I am not only an IT Engineer but also an eager lifelong learner.</p>
+                        <p>Besides my technical expertise, I am an extroverted and open-minded person with excellent communication skills. I leverage both my soft and hard skills to position myself as a leading engineer in the industry.</p>
+                    </div>
+                    <div class="box">
+                        <h1><h2 style="color: #3498db;">ML Libraries</h2></h1>
+                        <ul>
+                            <li>PyTorch</li>
+                            <li>XGBoost</li>
+                            <li>LightGBM</li>
+                            <li>Scikit Learn</li>
+                            <li>TensorFlow</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h1><h2 style="color: #3498db;">Python Libraries</h2></h1>
+                        <ul>
+                            <li>PyTest</li>
+                            <li>FastAPI</li>
+                            <li>MLFlow</li>
+                            <li>Streamlit</li>
+                            <li>Django</li>
+                            <li>Requests</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h1><h2 style="color: #3498db;">Programming Skills</h2></h1>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>Linux</li>
+                            <li>SQL</li>
+                            <li>Docker</li>
+                            <li>Microsoft Office</li>
+                            <li>MLOps</li>
+                            <li>Git</li>
+                            <li>AWS</li>
+                            <li>Airflow</li>
+                            <li>Kubernetes</li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <h1><h2 style="color: #3498db;">Technical skills</h2></h1>
+                        <ul>
+                            <li>Data Analytics</li>
+                            <li>Data Visualization</li>
+                            <li>Machine Learning</li>
+                            <li>IBM Cloud(WatsonStudio)</li>
+                            <li>Google Cloud Platform (GCP)</li>
+                            <li>BigDataTools(e.g.,Spark,Hadoop)</li>
+                            <li>Database Management System</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column: Experience and Education -->
+                <div class="right-column">
+                    <!-- Experience Section -->
+                    <div class="box">
+                        <h1><h2><p style="color: #3498db;">Experience</p></h2></h1>
+
+                        <!-- Google Cloud Section -->
+                        <div class="section">
+                            <div class="date-range">September 2024 - December 2024</div>
+                            <h2>Google Cloud</h2>
+                            <h3>Google Cloud Professional Data Engineer Trainee</h3>
+                            <ul>
+                                <li>Gained expertise in Google Cloud technologies by completing skill badges in data engineering, BigQuery, and Dataflow.</li>
+                                <li>Built and optimized data pipelines for predictive modeling, streaming analytics, and data warehouse modernization.</li>
+                                <li>Participated in mentor-led sessions and hands-on labs to prepare for the Professional Data Engineer certification.</li>
+                                <li>Completed the Google Cloud Certified Professional Data Engineer Training (Cohort ID: PDE04-GETCERT/2024.09.09) under the mentorship of Trainer Omar Shorbaji, earning multiple Google Cloud Skill Badges in areas such as BigQuery, Dataflow, and Streaming Analytics.</li>
+                            </ul>
+                        </div>
+
+                        <hr>
+
+                        <!-- Data Analytics using AI-LLMs Section -->
+                        <div class="section">
+                            <div class="date-range">October 2024 - November 2024</div>
+                            <h2>Data Analytics using AI-LLMs Internship  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a href="https://drive.google.com/file/d/1uPS5gDskQxbnE60XQeswcdvBvOp4CpAp/view" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Certificate Link </a></h2>
+                            
+                            <ul>
+                                <li>Developed and deployed predictive models using AI-LLMs to solve real-world problems in diverse industries, leveraging machine learning techniques for advanced data analysis and insights.</li>
+                                <li>Collaborated with mentors to optimize ML algorithms for performance, improving model accuracy and decision-making capabilities across various applications.</li>
+                                <li>Enhanced technical proficiency through the application of data analytics and visualization techniques, delivering actionable insights and refining model outputs for business use.</li>
+                            </ul>
+                        </div>
+
+                        <hr>
+
+                        <!-- Emerging Technologies Internship Section -->
+                        <div class="section">
+                            <div class="date-range">July 2024 - August 2024</div>
+                            <h2>Emerging Technologies (AI & Cloud) Internship<a href="https://drive.google.com/file/d/1SX9kGiKdgtLPuqFuDe3gie8JffDnmRxS/view" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Certificate Link </a></h2>
+                            <ul>
+                                <li>Edunet Foundation, Project Management and Cloud Integration: Gained hands-on experience in building AI models, including ChatBots, AutoAI, and NLP applications, while leveraging IBM Cloud tools like Watson Studio to solve real-world problems.</li>
+                                <li>Project Management and Presentation: Successfully collaborated on practical AI projects, attended masterclasses by industry experts, and showcased technical skills through a comprehensive final project presentation, earning certifications from IBM SkillsBuild, Edunet Foundation, and AICTE.</li>
+                            </ul>
+                        </div>
+
+                        <hr>
+
+                        <!-- Data Analytics and Power BI Section -->
+                        <div class="section">
+                            <div class="date-range">June 2024 - July 2024</div>
+                            <h2>Data Analytics and Power BI Internship &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="https://drive.google.com/file/d/1zTr-RwLRb9QE8V46PKFem7DAf2n8N9Cl/view" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Certificate Link </a></h2>
+                            <ul>
+                                <li>Developed interactive Power BI dashboards for data-driven insights.</li>
+                                <li>Analyzed telecom data to optimize business operations.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Education Section -->
+                    <div class="box">
+                        <h1><h2><p style="color: #3498db;">Education</p></h2></h1>
+                        <div class="section">
+                            <div class="date-range">July 2023 - Present</div>
+                            <h3>B.Tech (Computer Science & Engineering (Specialization in Data Analytics))</h3>
+                            <p>GLA University</p>
+                            <ul>
+                                <li>Developed expertise in Data Science, Machine Learning, Python Programming, Statistical Analysis, Predictive Modeling, Supervised & Unsupervised Learning, Deep Learning, NLP, Time Series Analysis, Data Preprocessing, Feature Engineering, Big Data Technologies (Hadoop, Spark), Data Visualization (Tableau, Power BI), and SQL.</li>
+                                <li>Operating Systems (OS), Database Management Systems (MySQL), Digital Electronics, Computer Organization, Discrete Mathematics, Full Stack Development (HTML, CSS, JS, PHP), Data Structures, Algorithms, Software Engineering (SDLC, Git), Cloud Platforms (GCP, AWS), Problem-Solving, Agile Methodology, Hackathon Innovation, Project Management, Presentation Skills.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h1><h2 style="color: #3498db;">Projects</h2></h1>
+                    <div class="section">
+                       <h2>SMS Spam Detection App  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://sms-spam-detection-app.onrender.com/" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Show Project</a></h2>
+                            
+                        <ul>
+                           <li>Real-time SMS classification using TF-IDF vectorization and supervised ML models.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Forest Fire Prediction and Analysis -->
+                    <div class="section">
+                        <h2>Forest Fire Prediction and Analysis  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://fwi-fire-weather-index-prediction-project.onrender.com/" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Show Project</a></h2>
+                        <ul>
+                            <li>Predicted forest fires using AutoAI and environmental data analysis.</li>
+                            <li>Achieved high R2 (0.9830) with a Linear Regression model.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Employee Burnout Prediction -->
+                    <div class="section">
+                        <h2>Employee Burnout Prediction  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://employee-burnout-prediction-and-analysis.onrender.com/" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Show Project</a></h2>
+                        <ul>
+                            <ul>
+                                <li>Predicts employee burnout risk using regression and ML techniques.</li>
+                                <li>Integrates Kaggle data for detailed analysis and real-time predictions.</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+
+                <!-- Certificates -->
+                <div class="box">
+                    <h1><h2 style="color: #3498db;">Certificates</h2></h1>
+
+                    <!-- Asia AI Odyssey Challenge -->
+                    <div class="section">
+                        <h2>Microsoft   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://drive.google.com/file/d/1JdXwWLnHxiS7FeE_E-r7xqf7B_CPYPvn/view" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Certificate Link</a></h2>
+                        <h2></h2>
+                        <ul>
+                            <li>Asia AI Odyssey Challenge
+                                <ul>
+                                    
+                                    <!-- <li>Completed a 25-hours AWS Course on Udemy.</li>
+                                    <li>Learned fundamentals of AWS and services like EC2, S3, IAM, VPC, RDS, ECR, EKS, and DynamoDB.</li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Docker -->
+                    <div class="section">
+                        <h2>Data Science   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://www.credly.com/badges/90a3c76d-320c-4754-b0d4-f3e09e2d1edc/public_url" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Certificate Link </a></h2>
+                        <ul>
+                            <li><strong>Python 101 for Data Science</strong>
+                                <ul>
+                                    <li>Completed a Python 101 for Data Science course on IBM SkillsBuild.</li>
+                                    <!-- <li>Learned basics of Docker.</li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Kubernetes -->
+                    <div class="section">
+                        <h2>Data Visualization   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://courses.skillsbuild.skillsnetwork.site/certificates/aca1bd018c024e3f81136fe5fce7cdc8" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Certificate Link </a></h2>
+                        <ul>
+                            <li><strong>Data Visualization with Python</strong>
+                                <ul>
+                                    <li>Completed a Data Visualization with Python Course on IBM SkillsBuild.</li>
+                                    <!-- <li>Learned fundamentals of Kubernetes and K8s objects such as Pod, Deployment, Service, Ingress, Cronjob, etc.</li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Modern Data Warehouse Analytics in Microsoft Azure -->
+                    <div class="section">
+                       
+                        <h2>Microsoft Azure  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://www.coursera.org/account/accomplishments/verify/V4SCBAAWTHNX" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Certificate Link </a></h2>
+                        <ul>
+                            <li><strong>Modern Data Warehouse Analytics in Microsoft Azure</strong>
+                                <ul>
+                                    <li>Completed a  Modern Data Warehouse Analytics in Microsoft Azure course.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Linux -->
+                    <div class="section">
+                        <h2>Data Science  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://courses.cognitiveclass.ai/certificates/4e4ffad2848949eca6a8dcb507104a66" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Certificate Link </a></h2>
+                        <ul>
+                            <li><strong>Data Science Tools</strong>
+                                <ul>
+                                    <li>Completed a  Data Science Tools Course on IBM SkillsBuild.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Big Data -->
+                    <div class="section">
+                        <h2>Big Data  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://courses.skillsbuild.skillsnetwork.site/certificates/91afed0ba0ac44edb1ca9794dcd0ba7f" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Certificate Link </a></h2>
+                        <ul>
+                            <li><strong>Big Data 101</strong>
+                                <ul>
+                                    <li>Completed  Big Data Course on IBM SkillsBuild.</li>
+                                    <li>Learned basics of Apache Kafka, Apache Hive, Hadoop, Apache Spark, and other NoSQL technologies.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Airflow -->
+                    <div class="section">
+                        <h2>Generative AI  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://www.coursera.org/account/accomplishments/verify/9MG22RCET8NF" style="color: rgba(19, 18, 21, 0.559); font-size: 18px;">Certificate Link </a></h2>
+                        <ul>
+                            <li><strong>Introduction to Generative AI</strong>
+                                <ul>
+                                    <!-- <li>Completed a 2.5 hours Airflow course.</li>
+                                    <li>Learned fundamentals of Airflow.</li> -->
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <a href="index.pdf" download="My_Resume.pdf" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; font-size: 16px; border-radius: 5px;">Download Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Hover and 3D Effects -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.js .form-check-input').click(function(){
+                $(this).toggleClass('active');    
+                $(document).mousemove(function(e){
+                    if($('.js .form-check-input').hasClass('active')){
+                        let x = (window.innerWidth / 2 - e.clientX) / 10;
+                        let y = (window.innerHeight / 2 - e.clientY) / 10;
+                        let z = (window.innerHeight / 2 - e.clientY) / 10;
+                        $('.outer-box').css({
+                            '-webkit-transform': 'rotateX(' + y + 'deg) rotateY(' + -x + 'deg) rotateZ(' + -z + 'deg) scale(0.7) ',
+                            '-moz-transform': 'rotateX(' + y + 'deg) rotateY(' + -x + 'deg) rotateZ(' + -z + 'deg) scale(0.7) ',
+                            '-ms-transform': 'rotateX(' + y + 'deg) rotateY(' + -x + 'deg) rotateZ(' + -z + 'deg) scale(0.7) ',
+                            '-o-transform': 'rotateX(' + y + 'deg) rotateY(' + -x + 'deg) rotateZ(' + -z + 'deg) scale(0.7) ',
+                            'transform': 'rotateX(' + y + 'deg) rotateY(' + -x + 'deg) rotateZ(' + -z + 'deg) scale(0.7) '
+                        });
+                        $('.box').css('transform', 'translateZ(50px)');
+                    }
+                    else {
+                        $('.outer-box, .box').attr("style", "");
+                    }
+                });
+            });
+
+            $('.hover .form-check-input').click(function(){
+                $(this).toggleClass('active');
+                if($('.hover .form-check-input').hasClass('active')){
+                    $('.outer-box').addClass('hover-active');
+                }
+                else{
+                    $('.outer-box').removeClass('hover-active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
